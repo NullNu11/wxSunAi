@@ -26,7 +26,11 @@ Page({
         result.data.data.forEach((element,index) => {
               this.data.questionName[index]=element
         });
-        console.log(this.data.questionName[0])
+       
+        this.setData({
+          questionName:this.data.questionName[0]
+        }),
+        console.log(this.data.questionName)
       },
       fail: () => {},
       complete: () => {}

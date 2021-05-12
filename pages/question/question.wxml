@@ -1,4 +1,9 @@
-<!--pages/question.wxml-->
-<view wx:for="{{questionName}}" wx:key="id"></view>
-<view >{{question_data}}   {{index}}</view>
-<view >问卷</view>
+<!-- pages/question.wxml -->
+ <view>问卷</view>
+<!-- <view wx:for="{{questionName}}"  wx:for-item="value" wx:for-index="key">
+    <view>{{key}}  {{value}} </view>  
+</view> -->
+<view wx:for-items="{{questionName}}" wx:for-item="item">
+   <text >{{index}}</text>
+   <view >{{item}}</view>
+</view>

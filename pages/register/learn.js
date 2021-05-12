@@ -119,7 +119,7 @@ Page({
     console.log("click register l"),
       wx.request({
         //url: 'http://3007h50y18.qicp.vip/register',
-        url:'127.0.0.1/register',
+        url:'http://127.0.0.1:4863/register',
         data: {
           user_id: this.data.user_id,
           user_name: this.data.user_name,

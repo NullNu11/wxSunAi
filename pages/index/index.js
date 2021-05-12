@@ -19,7 +19,7 @@ Page({
   onLoad:function() {
       var that=this
       wx.request({
-       url: 'http://127.0.0.1/list',
+       url: 'http://3007h50y18.qicp.vip/list',
        data: {},
        header: {'content-type':'application/json'},
        method: 'GET',
