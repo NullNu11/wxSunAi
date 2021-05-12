@@ -1,0 +1,5 @@
+/* pages/record.wxss */
+
+.headbar{
+    height: max-content;
+}

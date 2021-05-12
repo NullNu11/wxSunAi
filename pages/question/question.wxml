@@ -1,0 +1,4 @@
+<!--pages/question.wxml-->
+<view wx:for="{{questionName}}" wx:key="id"></view>
+<view >{{question_data}}   {{index}}</view>
+<view >问卷</view>

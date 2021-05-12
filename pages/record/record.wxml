@@ -1,0 +1,16 @@
+<!--pages/record.wxml-->
+<text class="headbar">打卡测试</text>
+<button bindtap="backBtn"> 返会</button>
+<button bindtap="dataBtn1">1心慌意乱</button>
+<button bindtap="dataBtn2">2心满意足</button>
+<button bindtap="dataBtn3">3心花怒放</button>
+<button bindtap="dataBtn4">4忍俊不禁</button>
+<button bindtap="dataBtn5">5心花怒放</button>
+<button bindtap="dataBtn6">6其乐融融</button>
+<button bindtap="dataBtn7">7乐不可支</button>
+<button bindtap="dataBtn8">8喜不自胜</button>
+<!-- <button bindtap="dataBtn9">9心慌意乱</button>
+<button bindtap="dataBtn10">10心满意足</button>
+<button bindtap="dataBtn11">11心花怒放</button>
+<button bindtap="dataBtn12">12忍俊不禁</button> -->
+<button bindtap="makeSure">提交</button>

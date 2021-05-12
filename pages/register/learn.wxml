@@ -1,0 +1,14 @@
+ <!-- pages/learn.wxml -->
+<!--<text wx:if="{{isshow}}">{{value}}</text>
+<button bindtap="btn">{{btnName}}</button>
+<view wx:for="{{arr}}" wx:for-item="shuju">{{index}}     {{shuju}}</view> -->
+<text >请输入手机</text>
+<input placeholder="手机"bindinput="phone"/>
+<text >请输入名字</text>
+<input placeholder="姓名"bindinput="name"/>
+<text >请输入个人介绍</text>
+<input placeholder="个人介绍" bindinput="introduction"/>
+
+<button bindtap="register">注册</button>
+<button bindtap="recordBtn">打卡</button>
+<button bindtap="questionBtn">问卷</button>

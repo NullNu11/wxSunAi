@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/register/learn",
+    "pages/record/record",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/question/question"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "TJ晴天AI",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
