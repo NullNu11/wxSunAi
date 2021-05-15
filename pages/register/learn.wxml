@@ -2,7 +2,7 @@
 <!--<text wx:if="{{isshow}}">{{value}}</text>
 <button bindtap="btn">{{btnName}}</button>
 <view wx:for="{{arr}}" wx:for-item="shuju">{{index}}     {{shuju}}</view> -->
-<text >请输入手机</text>
+<text >请输入学号</text>
 <input placeholder="手机"bindinput="phone"/>
 <text >请输入名字</text>
 <input placeholder="姓名"bindinput="name"/>

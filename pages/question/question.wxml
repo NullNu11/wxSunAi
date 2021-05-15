@@ -1,9 +1,32 @@
 <!-- pages/question.wxml -->
- <view>问卷</view>
-<!-- <view wx:for="{{questionName}}"  wx:for-item="value" wx:for-index="key">
+<!-- <view>问卷</view>
+ <view wx:for="{{questionName}}"  wx:for-item="value" wx:for-index="key">
     <view>{{key}}  {{value}} </view>  
 </view> -->
-<view wx:for-items="{{questionName}}" wx:for-item="item">
-   <text >{{index}}</text>
-   <view >{{item}}</view>
+<view style="center">问卷内容</view>
+<!-- 队形解析   留着吧万一以后有用 -->
+<!-- <template name="msgItem">
+    <view>
+        <view>题目： {{question_data}}</view>
+        <button>A： {{answer_6points}}</button>
+        <button>B： {{answer_5points}}</button>
+        <button>C： {{answer_4points}}</button>
+        <button>D： {{answer_3points}}</button>
+    </view>
+</template> -->
+<!-- <template is="msgItem" data="{{...value}}"></template> -->
+<view wx:for="{{questionName}}">
+    <view>{{index+1}}.{{item.question_data}}</view>
+    <button wx:if="{{item.answer_6points}}" bindtap="answer6">{{item.answer_6points}}</button>
+    <button wx:if="{{item.answer_5points}}" bindtap="answer5">{{item.answer_5points}}</button>
+    <button wx:if="{{item.answer_4points}}" bindtap="answer4">{{item.answer_4points}}</button>
+    <button wx:if="{{item.answer_3points}}" bindtap="answer3">{{item.answer_3points}}</button>
+    <button wx:if="{{item.answer_2points}}" bindtap="answer2">{{item.answer_2points}}</button>
+    <button wx:if="{{item.answer_1points}}" bindtap="answer1">{{item.answer_1points}}</button>
+    <button wx:if="{{item.answer_0points}}" bindtap="answer0">{{item.answer_0points}}</button>
+    <!-- <button>{{item.answer_1points}}</button>
+    <button>{{item.answer_0points}}</button> -->
+    
 </view>
+
+<button bindtap="submit">提交</button>

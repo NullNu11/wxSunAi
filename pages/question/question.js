@@ -5,7 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-     questionName:[10],
+    questionName: new Array(10),
+    points: 0,
+    answer_data: "",
+    arr: [
+      {
+        num: 1,
+        dataa: "hahah"
+      },
+      {
+        num: 2,
+        dataa: "wwaaw"
+      }
+    ]
   },
 
   /**
@@ -15,27 +27,31 @@ Page({
     wx.request({
       url: 'http://127.0.0.1:4863/search_question?',
       data: {
-        'type':"第一类问卷"
+        'type': "第一类问卷"
       },
-      header: {'content-type':'application/json'},
+      header: { 'content-type': 'application/json' },
       method: 'GET',
       dataType: 'json',
       responseType: 'text',
       success: (result) => {
-        console.log(result.data.data[0].question_data)
-        result.data.data.forEach((element,index) => {
-              this.data.questionName[index]=element
-        });
-       
-        this.setData({
-          questionName:this.data.questionName[0]
-        }),
-        console.log(this.data.questionName)
+        console.log(result.data),
+          this.setData({
+            questionName: result.data.data
+          })
+        //wocao   shuitmfamingd foreach  yiyang dd xaingguo quebnegnyong 
+        // result.data.data.forEach((element,index) => {
+        //       this.data.questionName[index]=element
+        // });
+
+        // this.setData({
+        //   questionName:this.data.questionName[0]
+        // }),
+
       },
-      fail: () => {},
-      complete: () => {}
+      fail: () => { },
+      complete: () => { console.log(this.data.questionName) }
     });
-      
+
 
   },
 
@@ -86,5 +102,43 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  answer6: function () {
+    this.setData({
+      points: this.data.points + 6
+    })
+  },
+  answer5: function () {
+    this.setData({
+      points: this.data.points + 5
+    })
+  },
+  answer4: function () {
+    this.setData({
+      points: this.data.points + 4
+    })
+  },
+  answer3: function () {
+    this.setData({
+      points: this.data.points + 3
+    })
+  },
+  answer2: function () {
+    this.setData({
+      points: this.data.points + 2
+    })
+  },
+  answer1: function () {
+    this.setData({
+      points: this.data.points + 1
+    })
+  },
+  answer0: function () {
+    this.setData({
+      points: this.data.points + 0
+    })
+  } ,
+  submit: function () {
+    console.log(this.data.points)
+}
 })
