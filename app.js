@@ -8,16 +8,14 @@ App({
     wx.login({
       timeout:10000,
       success: (result) => {
-        console.log(result.Date)
       },
       fail: () => {},
       complete: () => {}
     });
-      
-
   },
   globalData: {
     userInfo: null
     
-  }
+  },
+  
 })

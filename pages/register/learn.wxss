@@ -1,1 +1,5 @@
 /* pages/learn.wxss */
+.con{
+    background-color: blue;
+    position:inherit;
+}

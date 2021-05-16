@@ -10,7 +10,9 @@ Page({
     user_id: "",
     user_name: "",
     user_introduction: "",
-    return_msg: ""
+    return_msg: "",
+    fansile:"hahhah",
+    login_code:""
   },
 
   /**
@@ -163,9 +165,37 @@ Page({
       },
       fail: () => {},
       complete: () => {}
-    });
-      
-      
+    });    
+  },
+  getphone:function(e)
+  {
+     console.log('iv111111111'+e.detail.iv),
+     console.log('data111111111'+e.detail.encryptedData) ,
+     wx.login({
+       timeout:10000,
+       success: (result) => {
+         console.log('logincode111111111'+result.code),
+         this.setData({
+           login_code:result.code
+         }),
+         wx.request({
+          url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wx9d880530b072f0fa&secret=1ba3e28a7b644031482688fcc3c27a5e&js_code='+this.data.login_code+'&grant_type=authorization_code',
+          header: {'content-type':'application/json'},
+          method: 'GET',
+          dataType: 'json',
+          responseType: 'text',
+          success: (result) => {
+            console.log('session111111111'+result.data.session_key)
+            var d=JSON.stringify(result.data)
+            console.log(d)
+          },
+          fail: () => {},
+          complete: () => {}
+        });
+       },
+       fail: () => {},
+       complete: () => {}
+     });
+               
   }
-
 })
