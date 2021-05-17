@@ -16,25 +16,7 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad:function() {
-      var that=this
-      wx.request({
-       url: 'http://3007h50y18.qicp.vip/list',
-       data: {},
-       header: {'content-type':'application/json'},
-       method: 'GET',
-       dataType: 'json',
-       responseType: 'text',
-       success: (result) => {
-         that.setData({
-           list:result.data
-         })
-        console.log(result)
-       },
-       fail: () => {},
-       complete: () => {}
-     });
-       
+  onLoad:function() {  
        
   },
   getUserProfile(e) {

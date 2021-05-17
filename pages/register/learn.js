@@ -70,33 +70,6 @@ Page({
   onShareAppMessage: function () {
 
   },
-  btn: function () {
-    this.setData({
-      btnName: "注册"
-    })
-    wx.showModal({
-      title: '提示',
-      content: '这是一个模态弹窗',
-      success(res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
-      }
-    })
-    console.log(this.data.isshow)
-    if (this.data.isshow) {
-      this.setData({
-        isshow: false
-      })
-    }
-    else {
-      this.setData({
-        isshow: true
-      })
-    }
-  },
   phone: function (e) {
     this.setData({
       user_id: e.detail.value
@@ -112,13 +85,15 @@ Page({
       user_introduction: e.detail.value
     })
   },
-  recordBtn: function () {
-    wx.navigateTo({
-      url: '/pages/record/record',
-    })
+  getUserInfoData:function(){
+     console.log("===================register")
+     if(app.globalData.is_register==true){
+         
+     }
   },
   register: function () {
-    console.log("click register l"),
+    console.log("globalData.is_register==========="+app.globalData.is_register)
+    console.log("click register"),
       wx.request({
         //url: 'http://3007h50y18.qicp.vip/register',
         url:'http://127.0.0.1:4863/register',
@@ -154,27 +129,15 @@ Page({
           console.log("complete")
         }
       });
-
-  },
-  questionBtn:function(){
-    console.log("question"),
-    wx.navigateTo({
-      url: '/pages/question/question',
-      success: (result) => {
-        
-      },
-      fail: () => {},
-      complete: () => {}
-    });    
   },
   getphone:function(e)
   {
-     console.log('iv111111111'+e.detail.iv),
-     console.log('data111111111'+e.detail.encryptedData) ,
+     console.log('iv'+e.detail.iv),
+     console.log('encryptedData'+e.detail.encryptedData) ,
      wx.login({
        timeout:10000,
        success: (result) => {
-         console.log('logincode111111111'+result.code),
+        // console.log('logincode111111111'+result.code),
          this.setData({
            login_code:result.code
          }),
@@ -185,9 +148,9 @@ Page({
           dataType: 'json',
           responseType: 'text',
           success: (result) => {
-            console.log('session111111111'+result.data.session_key)
+            console.log('session_key'+result.data.session_key)
             var d=JSON.stringify(result.data)
-            console.log(d)
+            //console.log(d)
           },
           fail: () => {},
           complete: () => {}

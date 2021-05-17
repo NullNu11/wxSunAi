@@ -46,6 +46,7 @@ Page({
         // this.setData({
         //   questionName:this.data.questionName[0]
         // }),
+       
 
       },
       fail: () => { },

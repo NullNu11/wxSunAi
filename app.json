@@ -8,10 +8,39 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#705697",
     "navigationBarTitleText": "TJ晴天AI",
     "navigationBarTextStyle": "white"
   },
+  "tabBar": {
+    "color": "#919296",
+    "selectedColor": "#01BF09",
+    "backgroundColor": "#FEFEFE",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/record/record",
+        "text": "打卡",
+        "iconPath": "pages/src/icon.png",
+        "selectedIconPath": "pages/src/selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "pages/src/icon.png",
+        "selectedIconPath": "pages/src/selected.png"
+      },
+      {
+        "pagePath": "pages/register/learn",
+        "text": "推荐",
+        "iconPath": "pages/src/icon.png",
+        "selectedIconPath": "pages/src/selected.png"
+      }
+    ]
+  },
+  
+    
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

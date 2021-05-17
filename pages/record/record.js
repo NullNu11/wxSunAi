@@ -1,23 +1,34 @@
 // pages/record.js
+let app = getApp();
 Page({
   data: {
-    objectArray: [
-      { id: 5, unique: 'unique_5' },
-      { id: 4, unique: 'unique_4' },
-      { id: 3, unique: 'unique_3' },
-      { id: 2, unique: 'unique_2' },
-      { id: 1, unique: 'unique_1' },
-      { id: 0, unique: 'unique_0' },
-    ],
+    
     emotion: [20],
     emotionData: ""
   },
 
   //返会
   backBtn: function () {
-    wx.navigateBack({
-      delta: 0,
-    })
+    // wx.reLaunch({
+    //   url: '../logs/logs',
+    //   success: (result) => {
+        
+    //   },
+    //   fail: () => {},
+    //   complete: () => {}
+    // });
+    //两种都行哈哈哈哈
+    wx.navigateTo({
+      url: '/pages/logs/logs',
+      success: (result) => {
+        
+      },
+      fail: () => {},
+      complete: () => {}
+    });
+      
+      
+      
   },
   dataBtn1: function () {
     this.setData({
@@ -80,6 +91,8 @@ Page({
     })
   },
   makeSure: function () {
+    //更改全局变量实验
+    //app.globalData.is_register=true,
     wx.request({
       url: 'http://127.0.0.1:4863/add_record',
       data: {

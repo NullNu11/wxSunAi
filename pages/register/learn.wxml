@@ -9,10 +9,6 @@
 <text >请输入个人介绍</text>
 <input placeholder="个人介绍" bindinput="introduction"/>
 
-<button bindtap="register">注册</button>
-<button bindtap="recordBtn">打卡</button>
-<button bindtap="questionBtn">问卷</button>
-<text class="con">控制台</text>
-<view></view>
-<view >{{fansile}}</view>
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfoData">注册</button>
+
 <button open-type="getPhoneNumber" bindgetphonenumber="getphone">获取用户信息</button>

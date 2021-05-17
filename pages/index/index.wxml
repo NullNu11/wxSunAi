@@ -1,7 +1,4 @@
 <!--index.wxml-->
 
-<view wx:for="{{list}}" wx:key="list">
-  <view style="center">{{item.userId}}</view>
-  <view>{{item.phone}}</view>
-  <view >{{item.name}}</view>
+<view style="center">index
 </view>
