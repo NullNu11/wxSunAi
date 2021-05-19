@@ -90,9 +90,23 @@ Page({
       emotionData: this.data.emotionData + " l"
     })
   },
+  question:function(){
+   
+   wx.navigateTo({
+     url: '/pages/question/question',
+     success: (result) => {
+       
+     },
+     fail: () => { 
+     },
+     complete: () => { }
+   });
+     
+  },
   makeSure: function () {
     //更改全局变量实验
     //app.globalData.is_register=true,
+    console.log(app.globalData.phoneNumber)
     wx.request({
       url: 'http://127.0.0.1:4863/add_record',
       data: {

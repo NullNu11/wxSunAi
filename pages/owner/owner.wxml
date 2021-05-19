@@ -1,0 +1,3 @@
+<!--pages/owner.wxml-->
+<text>pages/owner.wxml</text>
+<button bindtap="registerBtn">注册</button>

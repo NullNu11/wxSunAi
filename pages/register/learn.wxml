@@ -3,12 +3,27 @@
 <button bindtap="btn">{{btnName}}</button>
 <view wx:for="{{arr}}" wx:for-item="shuju">{{index}}     {{shuju}}</view> -->
 <text >请输入学号</text>
-<input placeholder="手机"bindinput="phone"/>
+<input placeholder="学号"bindinput="studentid"/>
 <text >请输入名字</text>
 <input placeholder="姓名"bindinput="name"/>
-<text >请输入个人介绍</text>
-<input placeholder="个人介绍" bindinput="introduction"/>
 
-<button open-type="getUserInfo" bindgetuserinfo="getUserInfoData">注册</button>
-
-<button open-type="getPhoneNumber" bindgetphonenumber="getphone">获取用户信息</button>
+<van-cell-group>
+  <van-field
+    value="{{ studentnumber }}"
+    required
+    clearable
+    label="学号"
+    placeholder="请输入学号"
+    bind:click-icon="onClickIcon"
+  />
+  <van-field
+    value="{{ username }}"
+    type="number"
+    label="姓名"
+    placeholder="请输入姓名"
+    required
+    border="true"
+  />
+</van-cell-group>
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneData">注册</button>
+<button bindtap="kanzhi">kanzhi</button>
