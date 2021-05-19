@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/register/learn",
     "pages/record/record",
-    "pages/index/index",
+    "pages/register/learn",
+    "pages/recommend/recommend",
     "pages/logs/logs",
-    "pages/question/question"
+    "pages/question/question",
+    "pages/owner/owner"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,21 +27,18 @@
         "selectedIconPath": "pages/src/selected.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "我的",
+        "pagePath": "pages/recommend/recommend",
+        "text": "推荐",
         "iconPath": "pages/src/icon.png",
         "selectedIconPath": "pages/src/selected.png"
       },
       {
-        "pagePath": "pages/register/learn",
-        "text": "推荐",
+        "pagePath": "pages/owner/owner",
+        "text": "我的",
         "iconPath": "pages/src/icon.png",
         "selectedIconPath": "pages/src/selected.png"
       }
     ]
   },
-  
-    
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
